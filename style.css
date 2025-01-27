@@ -46,6 +46,11 @@ nav .nav-links a:hover {
     color: #d4f7dc;
 }
 
+/* Navbar Logo */
+nav .logo img {
+    height: 40px; /* Logonuzun yüksekliğine göre ayarlayın */
+}
+
 /* Hero Section */
 .hero {
     background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
@@ -209,4 +214,54 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: #d4f7dc;
+}
+
+footer .footer-logo img {
+    height: 50px; /* Logonuzun yüksekliğine göre ayarlayın */
+    margin-bottom: 10px;
+}
+
+/* Hero Section Animasyonu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1, .hero p, .hero .btn {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Proje Kartları Animasyonu */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.project-card {
+    animation: slideIn 0.5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.6s;
 }
